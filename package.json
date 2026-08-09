@@ -2,6 +2,7 @@
   "name": "ricks-rebrewed",
   "private": true,
   "scripts": {
-    "dev": "npx --yes serve -l 8787 ."
+    "dev": "npx --yes serve -l 8787 .",
+    "sync-css": "node sync-css.mjs"
   }
 }
