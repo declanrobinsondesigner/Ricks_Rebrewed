@@ -42,13 +42,6 @@ body {
   overflow-x: hidden;
 }
 
-.section,
-.strip,
-.site-footer {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 720px;
-}
-
 .sky-wash {
   position: fixed;
   inset: 0;
@@ -822,6 +815,8 @@ p {
 }
 
 .specials-photos .media-frame {
+  width: 100%;
+  min-height: 180px;
   aspect-ratio: 3 / 4;
   border-radius: 1.15rem;
   border: 3px solid var(--cloud);
@@ -947,7 +942,7 @@ p {
 .visit-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -1272,7 +1267,7 @@ p {
 .footer-brand em {
   font-family: var(--font-script);
   font-style: normal;
-  color: var(--coral);
+  color: #b33d36;
   font-weight: 400;
 }
 
