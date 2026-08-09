@@ -12,13 +12,22 @@
     year.textContent = String(new Date().getFullYear());
   }
 
+  let headerTicking = false;
   const setHeaderState = () => {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 24);
+    headerTicking = false;
   };
 
-  setHeaderState();
-  window.addEventListener("scroll", setHeaderState, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (headerTicking) return;
+      headerTicking = true;
+      window.requestAnimationFrame(setHeaderState);
+    },
+    { passive: true }
+  );
 
   if (toggle && nav && header) {
     const closeNav = () => {
